@@ -16,4 +16,4 @@ jobs:
         with:
           hf_token: ${{ secrets.hf_token }}
           repo: Richjerk/algorithm-township-small-business-chatbot
-          space:  Orange_Farm_Township_Small_Business_Chatbot
+          space:  township-chatbot-autotrain
