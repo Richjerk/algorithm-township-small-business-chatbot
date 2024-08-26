@@ -1,0 +1,19 @@
+name: Update Hugging Face Space
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-space:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Update Hugging Face Space
+        uses: huggingface/gradio-deploy@main
+        with:
+          hf_token: ${{ secrets.hf_token }}
+          repo: Richjerk/algorithm-township-small-business-chatbot
+          space: township-chatbot-autotrain
